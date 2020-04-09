@@ -44,7 +44,8 @@ sldlsubdir="$(dirname $sldl)"
 if [[ ! -f $JAIL_HOME$sldl ]];
 then
   echo "Copying $sldl $JAIL_HOME$sldlsubdir..."
-  /bin/cp $sldl $JAIL_HOME$sldlsubdir
+  /bin/mkdir -p $JAIL_HOME$sldlsubdir
+  /bin/cp $sldl $JAIL_HOME$sldlsubdir/
 else
   :
 fi
